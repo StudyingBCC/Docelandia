@@ -1,0 +1,286 @@
+/** Configurações gerais **/
+* {
+  box-sizing: border-box;
+}
+
+body {
+background-color: #FCE8EF;
+font-family: Roboto, Candara, Helvetica, sans-serif;
+color: #EB4A82;
+margin: 0;
+padding: 10px 50px 50px 50px;
+}
+
+h1, h2 {
+ margin: 0;
+}
+
+header h1 {
+  font-family: cream cake;
+  font-size: 5rem;
+  user-select: none;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.12);
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+}
+
+#logoImg {
+  padding-right: 10px;
+  pointer-events: none;
+}
+
+.menu {
+  background-color: #EB4A82;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.24), 0px 0px 2px rgba(0,0,0,0.25); 
+  font-family: bebas neue;
+}
+
+.menu a {
+  display: block;
+  padding: 13px;
+  color: white; 
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.menu a:hover {
+  background-color: white;
+  color: #EB4A82;
+  transition: background-color 0.5s;
+}
+
+.coluna-esquerda {
+  float: left;
+  width: 75%;
+}
+
+.coluna-direita {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.card {
+  background-color: #FAF6F8;
+  padding: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 1.5px;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2), 0px 0px 2px rgba(0,0,0,0.2);
+}
+
+.lastCard {
+  margin-bottom: 120px;
+}
+
+#promocaoBanner {
+  height: 200px;
+  background-image: url("images/brigadeiros.jpg");
+  background-size: 200%;
+  color: white;
+  text-shadow: 0px 0px 4px #FE5888;
+  font-size: 1vw; /* vw - viewport width, vh - viewport height */
+  position: relative;
+  transition: box-shadow 0.5s;
+  cursor: -webkit-grab;
+}
+
+#promocaoBanner:hover {
+  box-shadow: 10px 10px 16px #888888;
+}
+
+#promocaoValor {
+  position: absolute;
+  bottom: 26px;
+  right: 22px;
+}
+
+.sobreImg {
+  height: 75px;
+  border-radius: 50%;
+  margin: 10px;
+  box-shadow: 0px 0px 5px #888888;
+  cursor: -webkit-grab;
+  transition: box-shadow 0.3s;
+}
+
+.sobreImg:hover {
+  box-shadow: 5px 10px 10px #888888;
+}
+
+.sobreItens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sobreTexto a {
+  color: #FD458A;
+}
+
+.promo {
+  display: flex; 
+  white-space: nowrap;
+  overflow: hidden;
+  align-items: center;
+  font-size: 1.0vw;
+  font-weight: bolder;
+  padding: 10px;
+  cursor: -webkit-grab;
+  transition: box-shadow 0.3s;
+  }
+
+.promo:hover {
+  box-shadow: 0px 0px 10px #888888
+} 
+
+.promo img {
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social img {
+  margin: 5px;
+  cursor: -webkit-grab;
+  transition: opacity 0.3s;
+}
+
+.social img:hover {
+  opacity: 0.5;
+}
+
+.produto img {
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #FDB2CE ;
+  margin-top: 10px;
+}
+
+.produto {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  cursor: -webkit-grab;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+  font-size: 20px;
+}
+
+.produto:hover {
+  box-shadow: 5px 10px 15px #E8E8E8;
+}
+
+.tituloProduto {
+  font-weight: bold;
+}
+
+.produto p {
+ margin: 0;
+}
+
+.grid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-gap: 16px;
+}
+
+.miniGrid {
+  height: 270px;
+  overflow: hidden;
+  padding: 15px;
+}
+
+#entrega {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  height: 100px;
+  width: 300px;
+}
+
+#entrega img {
+  position: absolute;
+  right: 10px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+#tel {
+  position: absolute;
+  height: 60px;
+  background-color: #cf4b4f;
+  color:white;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Só funciona se os elementos forem irmãos */
+#entrega img:hover + #tel{
+  opacity: 100%;
+}
+
+#tel p {
+  margin: 0;
+}
+
+@media screen  and (max-width: 800px) {
+  .coluna-esquerda{
+    width: 100%;
+  }
+
+  .coluna-direita {
+    width: 100%;
+  }
+ 
+  header h1 {
+    font-size: 3rem;
+  }
+
+  #logoImg {
+    width: 75px;
+  }
+
+  #promocaoBanner {
+    font-size: 4vw;
+  }
+
+  .promo {
+  font-size: 4vw;
+  }
+
+  body {
+    padding: 5px 25px 25px 25px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .menu {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #promo {
+  font-size: 6vw;
+  }
+
+}
